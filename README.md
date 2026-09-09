@@ -9,6 +9,7 @@ Welcome to the **Learn Python** repository! This repository contains a structure
 | # | Topic / Module | Description | Google Colab |
 | :--- | :--- | :--- | :---: |
 | **01** | **[Asyncio & Concurrency Mastery](./01_asyncio_mastery.ipynb)** | Deep dive into synchronous execution, blocking I/O, Event Loop architecture, 7 async design patterns, and performance benchmarks. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rohit-Saini-Sfdc/learn-python/blob/main/01_asyncio_mastery.ipynb) |
+| **02** | **[Python HTTPX Mastery](./02_httpx_mastery.ipynb)** | Complete guide to modern HTTP requests: sync (`httpx.Client`) & async (`httpx.AsyncClient`), HTTP/2, streaming, timeouts, error handling, and `MockTransport` testing. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rohit-Saini-Sfdc/learn-python/blob/main/02_httpx_mastery.ipynb) |
 
 ---
 
@@ -42,6 +43,18 @@ jupyter notebook
    - `asyncio.Queue` — Producer-consumer worker queues
    - `asyncio.to_thread()` — Running blocking synchronous code off-thread
 5. **Sync vs. Async Benchmark**: Empirical speedup demonstration (~10x faster for I/O operations).
+
+---
+
+## 🎯 What's Covered in Notebook 02 (`02_httpx_mastery.ipynb`)
+
+1. **Why HTTPX?**: Comparison matrix (`httpx` vs. `requests` vs. `aiohttp`), dual sync/async APIs, and default 5s timeouts.
+2. **Basic HTTP Operations**: Synchronous GET, POST, PUT, DELETE requests, JSON payloads, headers, query params, and `httpx.Response` methods.
+3. **Connection Persistence (`httpx.Client`)**: Reusing connection pools, setting base URLs, default headers, and Keep-Alive optimization.
+4. **Asynchronous Client (`httpx.AsyncClient`)**: Writing `async`/`await` HTTP code, parallel fetching with `asyncio.gather()`, and speedup benchmarks.
+5. **Response Streaming**: Handling large files/datasets without memory overhead using `iter_bytes()`, `iter_lines()`, and `aiter_bytes()`.
+6. **Advanced Features**: Fine-grained timeouts (`httpx.Timeout`), HTTP/2 multiplexing (`http2=True`), authentication flows, and redirects.
+7. **Resilient Error Handling & Testing**: Catching `httpx.HTTPError`, `httpx.HTTPStatusError`, `raise_for_status()`, event hooks, and network-free unit testing with `httpx.MockTransport`.
 
 ---
 
