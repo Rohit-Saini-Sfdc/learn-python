@@ -11,6 +11,7 @@ Welcome to the **Learn Python** repository! This repository contains a structure
 | **01** | **[Asyncio & Concurrency Mastery](./01_asyncio_mastery.ipynb)** | Deep dive into synchronous execution, blocking I/O, Event Loop architecture, 7 async design patterns, and performance benchmarks. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rohit-Saini-Sfdc/learn-python/blob/main/01_asyncio_mastery.ipynb) |
 | **02** | **[Python HTTPX Mastery](./02_httpx_mastery.ipynb)** | Complete guide to modern HTTP requests: sync (`httpx.Client`) & async (`httpx.AsyncClient`), HTTP/2, streaming, timeouts, error handling, and `MockTransport` testing. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rohit-Saini-Sfdc/learn-python/blob/main/02_httpx_mastery.ipynb) |
 | **03** | **[Pydantic & Type Validation Mastery](./03_pydantic_mastery.ipynb)** | Master Python runtime data validation: why type hints don't enforce constraints, `BaseModel`, `Field`, `field_validator`, `Optional`, and JSON parsing benchmarks. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rohit-Saini-Sfdc/learn-python/blob/main/03_pydantic_mastery.ipynb) |
+| **04** | **[Python Logging Mastery](./04_logging_mastery.ipynb)** | Complete guide to production logging: handlers (`StreamHandler`, `RotatingFileHandler`), custom formatters (JSON & ANSI colored), `dictConfig`, lazy evaluation, and ETL audit pipeline. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rohit-Saini-Sfdc/learn-python/blob/main/04_logging_mastery.ipynb) |
 
 ---
 
@@ -66,6 +67,18 @@ jupyter notebook
 4. **`Field` Declarative Constraints**: Range limits (`ge`, `le`), string length (`min_length`, `max_length`), regex patterns, metadata (`description`), and default factories.
 5. **`field_validator` & `model_validator`**: Pre-processing raw input (`mode="before"`), post-validation cleanup (`mode="after"`), and cross-field validation rules.
 6. **Real-World ETL Benchmark**: Processing raw JSON payloads with Vanilla Python manual checks vs. Pydantic `BaseModel`.
+
+---
+
+## 🎯 What's Covered in Notebook 04 (`04_logging_mastery.ipynb`)
+
+1. **Why `print()` is NOT Logging**: Flaws of stdout print statements, standard numeric logging levels (`DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`), and threshold filtering.
+2. **Core Architecture & Hierarchy**: Deep dive into the 4 pillars (`Logger`, `Handler`, `Formatter`, `Filter`), dot notation namespace trees, and `propagate` behavior.
+3. **Formatter & Performance Optimization**: Formatter specifiers (`%(asctime)s`, `%(filename)s`, `%(lineno)d`), and lazy string interpolation (`logger.info("User %s", user)`) vs eager `f-strings`.
+4. **Multi-Destination & Log Rotation**: Simultaneous console (`StreamHandler`) and rotating file logging (`RotatingFileHandler`, `TimedRotatingFileHandler`) to prevent disk overflow.
+5. **Structured JSON & Colored Loggers**: Custom ANSI colored formatter for local terminal debugging vs `JSONFormatter` for production cloud observability (ELK, CloudWatch, Datadog).
+6. **Enterprise `dictConfig` & Exception Tracking**: Declarative setup with `logging.config.dictConfig()` and automatic stack trace capture using `logger.exception()`.
+7. **Real-World ETL Pipeline Project**: Full end-to-end data pipeline simulation with structured JSON log output, audit file rotation, and error fallback metrics.
 
 ---
 
