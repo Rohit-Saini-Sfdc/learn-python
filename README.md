@@ -12,6 +12,7 @@ Welcome to the **Learn Python** repository! This repository contains a structure
 | **02** | **[Python HTTPX Mastery](./02_httpx_mastery.ipynb)** | Complete guide to modern HTTP requests: sync (`httpx.Client`) & async (`httpx.AsyncClient`), HTTP/2, streaming, timeouts, error handling, and `MockTransport` testing. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rohit-Saini-Sfdc/learn-python/blob/main/02_httpx_mastery.ipynb) |
 | **03** | **[Pydantic & Type Validation Mastery](./03_pydantic_mastery.ipynb)** | Master Python runtime data validation: why type hints don't enforce constraints, `BaseModel`, `Field`, `field_validator`, `Optional`, and JSON parsing benchmarks. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rohit-Saini-Sfdc/learn-python/blob/main/03_pydantic_mastery.ipynb) |
 | **04** | **[Python Logging Mastery](./04_logging_mastery.ipynb)** | Complete guide to production logging: handlers (`StreamHandler`, `RotatingFileHandler`), custom formatters (JSON & ANSI colored), `dictConfig`, lazy evaluation, and ETL audit pipeline. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rohit-Saini-Sfdc/learn-python/blob/main/04_logging_mastery.ipynb) |
+| **05** | **[Chroma DB RAG Support Tickets](./05_chroma_db_rag_mastery.ipynb)** | Complete guide to RAG with Chroma DB & OpenAI: Support Ticket use case, embeddings generation, Cosine Similarity search, LLM answer synthesis, and metadata filtering. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Rohit-Saini-Sfdc/learn-python/blob/main/05_chroma_db_rag_mastery.ipynb) |
 
 ---
 
@@ -79,6 +80,18 @@ jupyter notebook
 5. **Structured JSON & Colored Loggers**: Custom ANSI colored formatter for local terminal debugging vs `JSONFormatter` for production cloud observability (ELK, CloudWatch, Datadog).
 6. **Enterprise `dictConfig` & Exception Tracking**: Declarative setup with `logging.config.dictConfig()` and automatic stack trace capture using `logger.exception()`.
 7. **Real-World ETL Pipeline Project**: Full end-to-end data pipeline simulation with structured JSON log output, audit file rotation, and error fallback metrics.
+
+---
+
+## 🎯 What's Covered in Notebook 05 (`05_chroma_db_rag_mastery.ipynb`)
+
+1. **Practical Use Case**: AI Support Ticket Assistant for SaaS applications.
+2. **Support Ticket Dataset**: Structuring issue titles, problem statements, verified resolutions, and metadata (`category`, `priority`).
+3. **Chroma DB Initialization & Cosine Metric**: Ephemeral client setup with explicit Cosine Similarity space (`{"hnsw:space": "cosine"}`).
+4. **Vector Embeddings**: Indexing tickets with OpenAI's `text-embedding-3-small`.
+5. **Similarity Search**: Finding top-$K$ historical tickets using Cosine Distance and similarity score conversion ($1 - \text{distance}$).
+6. **End-to-End RAG Pipeline**: Context retrieval + prompt engineering + OpenAI `gpt-4o-mini` solution generation.
+7. **Metadata Filtering & Updates**: Category filtering (`where={"category": "Authentication"}`) and upserting updated ticket resolutions.
 
 ---
 
